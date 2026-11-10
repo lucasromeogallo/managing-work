@@ -1,0 +1,18 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local client data and generated files (keep client work in separate repos)
+clients/
+customer-data/
+local-data/
+exports/
+*.log
+
+# Common local tooling
+.DS_Store
+.idea/
+.vscode/
