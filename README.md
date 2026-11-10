@@ -1,16 +1,16 @@
-# Small-business automation projects
+# Shared project standards
 
-A practical home for learning, designing, and delivering small-business process automations. Use the project brief and guidance here to keep client work understandable, separated, and maintainable as you grow your coding skills.
+This repository is the shared standards and starter-materials home for small-business automation projects. Use it as the cross-project reference when creating a separate repository for a company or client; keep each company's application, configuration, and data in its own repository.
 
-> **This repository is a starter and learning space, not a finished automation product.** It currently contains a GitHub Issues and Projects workshop lab under `.github/`. No client-specific automation, hosting, or Muse/Claude integration is implemented here. Keep real client work in a separate private repository for each client.
+> **This is a standards repository, not a finished automation product or a company application.** It currently also contains a GitHub Issues and Projects workshop lab under `.github/`. No client-specific automation, hosting, or Muse/Claude integration is implemented here.
 
 ## Start here
 
-1. Read [the project brief template](templates/automation-project/PROJECT_BRIEF.md) and make a copy for a new project. Fill it in with non-sensitive details only.
-2. Read [client separation and privacy](docs/client-separation-and-privacy.md) before collecting or handling client information.
-3. Use [the suggested project structure](templates/automation-project/README.md) to start each automation in its own private repository.
-4. Choose a hosting approach with the client using [the hosting and deployment checklist](docs/hosting-and-deployment.md).
-5. Add external AI or other services only behind the provider boundaries described in [integration guidance](docs/integrations.md).
+1. Review the [shared standards index](docs/README.md) to find the guidance relevant to your work.
+2. Follow [the guide for applying these standards](docs/applying-standards.md) when creating a company-specific repository.
+3. Use [the project brief](templates/automation-project/PROJECT_BRIEF.md) and [suggested project structure](templates/automation-project/README.md) as starting points, adapting them to the project rather than treating them as application code.
+4. Before handling client information or deploying, review [client separation and privacy](docs/client-separation-and-privacy.md) and [hosting and deployment](docs/hosting-and-deployment.md).
+5. Add external AI or other services only after review, behind the boundaries described in [integration guidance](docs/integrations.md).
 
 ## A safe default for each client
 
@@ -24,11 +24,12 @@ These are practical safeguards, not legal, security, or compliance advice. Confi
 
 ## Repository map
 
-- `templates/automation-project/` — copyable brief and suggested layout for a client project.
-- `docs/` — privacy, hosting, and integration guidance.
+- [`docs/README.md`](docs/README.md) — index of shared guidance and repository-level references.
+- [`docs/applying-standards.md`](docs/applying-standards.md) — how to use this core repository as the baseline for separate company projects.
+- `docs/` — privacy, hosting, and integration guidance; each document's scope and source are listed in the index.
+- `templates/automation-project/` — copyable project brief, suggested layout, and decision-record template.
 - `.github/` — existing GitHub Issues and Projects workshop lab assets; they are not client automation examples.
-- `CONTRIBUTING.md` — safe development and contribution guidance.
-- `SECURITY.md` — how to report security issues or accidental exposure.
+- [`CONTRIBUTING.md`](CONTRIBUTING.md), [`SECURITY.md`](SECURITY.md), [`SUPPORT.md`](SUPPORT.md), and [`CODE_OF_CONTENT.md`](CODE_OF_CONTENT.md) — guidance for this repository and its contributors.
 
 ## Contributing and support
 
