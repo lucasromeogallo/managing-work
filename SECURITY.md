@@ -1,31 +1,18 @@
-Thanks for helping make GitHub safe for everyone.
+# Security and privacy
 
-## Security
+This repository is a learning and starter space; it is not a security or compliance certification. Before building or hosting a workflow for a business, agree on what data it handles, who can access it, where it runs, and how it can be stopped and recovered.
 
-GitHub takes the security of our software products and services seriously, including all of the open source code repositories managed through our GitHub organizations, such as [GitHub](https://github.com/GitHub).
+## Handling client information
 
-Even though [open source repositories are outside of the scope of our bug bounty program](https://bounty.github.com/index.html#scope) and therefore not eligible for bounty rewards, we will ensure that your finding gets passed along to the appropriate maintainers for remediation. 
+- Keep client work in a separate private repository and deployment per client. Do not copy one client's records, credentials, or configuration into another client's project.
+- Do not commit credentials, personal information, customer records, exports, private logs, or confidential business details. Use synthetic data for examples, tests, and screenshots.
+- Store required credentials only in the hosting platform's secret manager or another approved secrets manager. Give each integration its own limited-purpose credential and rotate or revoke it when access is no longer needed.
+- Send a third-party or AI provider only the minimum information needed for the task, after confirming the client allows it. Check the provider's current privacy, retention, and data-processing terms rather than assuming data is not retained.
+- Avoid logging request bodies, tokens, personal data, and generated content unless necessary and explicitly approved. Establish appropriate retention and access limits for logs and backups.
+- Do not deploy generated code or enable irreversible actions without review, tests, and a rollback or manual recovery plan.
 
-## Reporting Security Issues
+## Reporting a vulnerability or exposure
 
-If you believe you have found a security vulnerability in any GitHub-owned repository, please report it to us through coordinated disclosure.
+Please do not publish secrets, client information, or actionable vulnerability details in a public issue or pull request. Use GitHub's private vulnerability reporting feature for this repository if it is enabled. Otherwise, contact the repository owner privately through an account channel they have provided. Do not include live credentials or customer data in a report; redact them and revoke/rotate exposed credentials immediately.
 
-**Please do not report security vulnerabilities through public GitHub issues, discussions, or pull requests.**
-
-Instead, please send an email to opensource-security[@]github.com.
-
-Please include as much of the information listed below as you can to help us better understand and resolve the issue:
-
-  * The type of issue (e.g., buffer overflow, SQL injection, or cross-site scripting)
-  * Full paths of source file(s) related to the manifestation of the issue
-  * The location of the affected source code (tag/branch/commit or direct URL)
-  * Any special configuration required to reproduce the issue
-  * Step-by-step instructions to reproduce the issue
-  * Proof-of-concept or exploit code (if possible)
-  * Impact of the issue, including how an attacker might exploit the issue
-
-This information will help us triage your report more quickly.
-
-## Policy
-
-See [GitHub's Safe Harbor Policy](https://docs.github.com/en/github/site-policy/github-bug-bounty-program-legal-safe-harbor#1-safe-harbor-terms)
+For an accidental exposure, first remove access to the exposed credential or data, then notify the affected client and repository owner through an appropriate private channel. Deleting a secret from the latest commit does not erase it from Git history, clones, logs, or caches; rotate it and follow the hosting provider's guidance for cleanup.

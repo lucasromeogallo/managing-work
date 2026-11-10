@@ -1,31 +1,21 @@
-## Contributing
+# Contributing
 
-[fork]: https://github.com/github/startups-content/fork
-[pr]: https://github.com/github/startups-content/compare
-[code-of-conduct]: CODE_OF_CONDUCT.md
+Thanks for helping improve this learning and automation starter repository. Keep changes focused, beginner-friendly, and consistent with the guidance in the README.
 
-Hi there! We're thrilled that you'd like to contribute to this project. Your help is essential for keeping it great.
+## Before you contribute
 
-Contributions to this project are [released](https://help.github.com/articles/github-terms-of-service/#6-contributions-under-repository-license) to the public under the [project's open source license](LICENSE.md).
+- Never add real client identifiers, business records, credentials, exports, or production logs. Use fictional examples and synthetic data.
+- Do not add a vendor SDK, API call, or claim about Muse or another provider without verified documentation and a clearly scoped need. Keep provider-specific behavior behind an adapter as described in [integration guidance](docs/integrations.md).
+- Keep client-specific code and configuration in a separate private repository, not in this shared starter.
 
-Please note that this project is released with a [Contributor Code of Conduct][code-of-conduct]. By participating in this project you agree to abide by its terms.
+## Local checks
 
-## Prerequisites for running and testing code
+This repository is primarily Markdown plus a GitHub Issues and Projects workshop lab. There is no application build or automated test suite configured. Before submitting a change:
 
-There are no external tools required to run and test this code.  It only contains one Bash script and Actions YAML. The real value of this repo is the markdown documentation which doesn't require additional tools.
+1. Preview edited Markdown and check its relative links.
+2. If editing the workshop scripts or workflows, review the complete diff and test only in a repository you own that contains no client data. The issue-seeding script can delete repository issues when run with `--delete` or `--seed-all`; do not run it against a real client repository.
+3. Check `git diff --check` for whitespace errors.
 
-## Submitting a pull request
+## Submitting changes
 
-1. [Fork][fork] and clone the repository
-2. Make your change
-3. Push to your fork and [submit a pull request][pr]
-4. Pat your self on the back and wait for your pull request to be reviewed and merged.
-
-- Keep your change as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests.
-- Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
-
-## Resources
-
-- [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
-- [Using Pull Requests](https://help.github.com/articles/about-pull-requests/)
-- [GitHub Help](https://help.github.com)
+Use a focused branch and pull request. Describe what changed, how you checked it, and any limitations. Never include a secret or confidential client information in a commit, issue, pull request, screenshot, or log.
